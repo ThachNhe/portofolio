@@ -1,0 +1,11 @@
+
+services:
+  portfolio-client:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "3001:5173"
+    env_file:
+      - .env
+    restart: unless-stopped
