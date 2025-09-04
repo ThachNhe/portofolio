@@ -1,18 +1,25 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  ChartColumnDecreasing,
-  CodeXml,
-  Menu,
-  X
-} from "lucide-react";
+import { ChartColumnDecreasing, CodeXml, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { InfoBadge } from "./components/ui/Info-badge";
 import { ProfileActionButton } from "./components/ui/profile-action-button";
 import { SkillBadge } from "./components/ui/skill-badge";
 import { SocialMedia } from "./components/ui/social-media";
 import TypeWriter from "./components/ui/typewriter";
-import { infoBadges, navItems, ProfileActionButtons, skillBadges, socialMedials } from "./utils/constants";
+import {
+  infoBadges,
+  navItems,
+  ProfileActionButtons,
+  skillBadges,
+  socialMedials,
+  introCards,
+  personalInfos
+} from "./utils/constants";
+import { SectionContainer } from "./components/ui/section-container";
+import { SectionHeader } from "./components/ui/section-header";
+import { IntroCard } from "./components/ui/intro-card";
+import { PersonalInfoCard } from "./components/ui/personal-info-card";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -91,11 +98,12 @@ const Portfolio = () => {
         </div>
       </header>
       <main>
+        {/* Home Section */}
         <section
           id="home"
-          className="min-h-screen bg-white shadow-lg overflow-hidden pt-24"
+          className="min-h-screen bg-white shadow-lg overflow-hidden"
         >
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <SectionContainer>
             <div className="flex flex-col lg:flex-row items-center gap-10 justify-center min-h-[calc(100vh-5rem)] py-12">
               <div className="flex flex-col gap-10 w-full flex-1">
                 <div className="space-y-4">
@@ -140,7 +148,9 @@ const Portfolio = () => {
                   <div className="flex space-x-3">
                     {socialMedials.map((socialMedia, index) => {
                       const { icon: Icon, link } = socialMedia;
-                      return <SocialMedia key={index} icon={Icon} link={link} />;
+                      return (
+                        <SocialMedia key={index} icon={Icon} link={link} />
+                      );
                     })}
                   </div>
                 </div>
@@ -215,7 +225,62 @@ const Portfolio = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </SectionContainer>
+        </section>
+
+        {/* About Section */}
+
+        <section
+          id="about"
+          className="min-h-screen bg-white pt-20 overflow-hidden"
+          data-aos="fade-up"
+          data-aos-duration="8000"
+        >
+          <SectionContainer>
+            <SectionHeader
+              title="About Me"
+              subtitle="I am a passionate web developer with a knack for creating dynamic and responsive web applications."
+            />
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center min-h-[calc(100vh-5rem)]">
+              <div className="flex items-center justify-center lg:justify-start">
+                <img
+                  src="https://thach-bucket110902.s3.ap-southeast-1.amazonaws.com/7a74fb22-637f-4000-b014-b20b0a1b24cc.jpg"
+                  alt="About me"
+                  className="w-96 h-96 object-cover max-w-md border-8 border-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 duration-300"
+                />
+              </div>
+              <div className="w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {introCards.map((item, index) => {
+                  return (
+                    <IntroCard
+                      key={index}
+                      icon={item.icon}
+                      size={item.size}
+                      title={item.title}
+                      desc={item.desc}
+                    />
+                  )
+                })}
+
+                {personalInfos.map((item, index) => {
+                  return (
+                    <PersonalInfoCard
+                      key={index}
+                      icon={item.icon}
+                      size={item.size}
+                      label={item.label}
+                      value={item.value}
+                    />
+                  )
+                })}
+                </div>
+
+                <div></div>
+              </div>
+            </div>
+          </SectionContainer>
         </section>
       </main>
     </div>

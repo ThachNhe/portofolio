@@ -6,13 +6,14 @@ import {
   MailPlus,
   Star,
   Users,
-} from "lucide-react";
-
-
-import { IoLogoJavascript } from "react-icons/io";
-import { IoLogoCss3 } from "react-icons/io5";
-
-import {
+  BadgeAlert,
+  Lightbulb, 
+  FolderPen,
+  CalendarDays,
+  MailMinus,
+  Phone,
+  MapPinHouse,
+  BookOpenCheck,
   BriefcaseBusiness,
   Download,
   FileJson,
@@ -20,6 +21,10 @@ import {
   GraduationCap,
   Mail
 } from "lucide-react";
+
+
+import { IoLogoJavascript } from "react-icons/io";
+import { IoLogoCss3 } from "react-icons/io5";
 import {
   FaFacebookF,
   FaGithub,
@@ -104,3 +109,19 @@ export const ProfileActionButtons = [
   { icon: Download, size: 20, title: "Explore My Project" },
   { icon: Mail, size: 20, title: "Contact Me" },
 ];
+
+
+export const introCards = [
+  {icon: BadgeAlert, size: 20, title: "Who Am I?", desc: "I'm a frontend developer who crafts responsive, interactive, and clean UIs. With a background in Informatics Engineering, I blend design sense with technical logic." },
+  {icon: Lightbulb, size: 20, title: "My approach", desc: "I believe in a user-centered design process, where understanding the user's needs and pain points is key to creating effective solutions." }
+]
+
+export const personalInfos = [
+  {icon: FolderPen , size: 20, label: "Name", value: "Thach Dinh" },
+  {icon: CalendarDays , size: 20, label: "Date of Birth", value: "January 1, 1990" },
+  {icon: MailMinus , size: 20, label: "Email", value: "thach.dinh@example.com" },
+  {icon: Phone , size: 20, label: "Phone", value: "+1234567890" },
+  {icon: MapPinHouse , size: 20, label: "Place of Birth", value: "Vietnam" },
+  {icon: BookOpenCheck , size: 20, label: "GPA", value: "3.63/4" },
+  {icon: GraduationCap , size: 20, label: "Education", value: "University of Engineering and Technology" }
+]
