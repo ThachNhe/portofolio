@@ -3,7 +3,7 @@ services:
   portfolio-client:
     build: 
       context: .
-      dockerfile: dockerfile
+      dockerfile: dockerfile.prod
     ports:
       - "3001:5173"
     env_file:
