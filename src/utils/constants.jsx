@@ -123,5 +123,5 @@ export const personalInfos = [
   {icon: Phone , size: 20, label: "Phone", value: "+1234567890" },
   {icon: MapPinHouse , size: 20, label: "Place of Birth", value: "Vietnam" },
   {icon: BookOpenCheck , size: 20, label: "GPA", value: "3.63/4" },
-  {icon: GraduationCap , size: 20, label: "Education", value: "University of Engineering and Technology" }
+  {icon: GraduationCap , size: 20, label: "Education", value: "University of Engineering and Technology" },
 ]

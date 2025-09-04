@@ -1,6 +1,12 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { ChartColumnDecreasing, CodeXml, Menu, X } from "lucide-react";
+import {
+  ChartColumnDecreasing,
+  CodeXml,
+  Menu,
+  X,
+  CircleAlert,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import { InfoBadge } from "./components/custom/Info-badge";
 import { ProfileActionButton } from "./components/custom/profile-action-button";
@@ -14,7 +20,7 @@ import {
   skillBadges,
   socialMedials,
   introCards,
-  personalInfos
+  personalInfos,
 } from "./utils/constants";
 import { SectionContainer } from "./components/custom/section-container";
 import { SectionHeader } from "./components/custom/section-header";
@@ -32,6 +38,14 @@ const Portfolio = () => {
       offset: 100,
       easing: "ease-in-out",
     });
+
+    const hash = window.location.hash.slice(1);
+    if (hash && navItems.some((item) => item.id === hash)) {
+      setActiveSection(hash);
+      setTimeout(() => {
+        scrollToSection(hash);
+      }, 100);
+    }
   }, []);
 
   const scrollToSection = (id) => {
@@ -43,6 +57,7 @@ const Portfolio = () => {
       });
     }
 
+    window.location.hash = id;
     setActiveSection(id);
   };
 
@@ -184,7 +199,7 @@ const Portfolio = () => {
                 </h4>
 
                 <div
-                  className="grid grid-cols-2 lg:grid-cols-4 gap-4"
+                  className="grid grid-cols-2 sm:grid-cols-4 gap-4"
                   data-aos="fade-up"
                   data-aos-delay="600"
                 >
@@ -208,7 +223,7 @@ const Portfolio = () => {
               >
                 <div className="relative z-20">
                   <img
-                    src="https://thach-bucket110902.s3.ap-southeast-1.amazonaws.com/7a74fb22-637f-4000-b014-b20b0a1b24cc.jpg"
+                    src="https://thach-bucket110902.s3.ap-southeast-1.amazonaws.com/nhai.jpg"
                     alt="van thach portfolio"
                     className="w-64 h-64 sm:h-80 sm:w-80 lg:w-96 lg:h-96 rounded-full shadow-2xl border-8 border-white hover:-translate-y-3 duration-300 object-cover"
                   />
@@ -245,39 +260,45 @@ const Portfolio = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center min-h-[calc(100vh-5rem)]">
               <div className="flex items-center justify-center lg:justify-start">
                 <img
-                  src="https://thach-bucket110902.s3.ap-southeast-1.amazonaws.com/7a74fb22-637f-4000-b014-b20b0a1b24cc.jpg"
+                  src="https://thach-bucket110902.s3.ap-southeast-1.amazonaws.com/nhai.jpg"
                   alt="About me"
                   className="w-96 h-96 object-cover max-w-md border-8 border-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 duration-300"
                 />
               </div>
               <div className="w-full">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {introCards.map((item, index) => {
-                  return (
-                    <IntroCard
-                      key={index}
-                      icon={item.icon}
-                      size={item.size}
-                      title={item.title}
-                      desc={item.desc}
-                    />
-                  )
-                })}
-
-                {personalInfos.map((item, index) => {
-                  return (
-                    <PersonalInfoCard
-                      key={index}
-                      icon={item.icon}
-                      size={item.size}
-                      label={item.label}
-                      value={item.value}
-                    />
-                  )
-                })}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  {introCards.map((item, index) => {
+                    return (
+                      <IntroCard
+                        key={index}
+                        icon={item.icon}
+                        size={item.size}
+                        title={item.title}
+                        desc={item.desc}
+                      />
+                    );
+                  })}
+                </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <CircleAlert size={23} />
+                  <span className="text-2xl text-gray-800 font-semibold">
+                    Personal Info
+                  </span>
                 </div>
 
-                <div></div>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-lg mx-auto">
+                  {personalInfos.map((item, index) => {
+                    return (
+                      <PersonalInfoCard
+                        key={index}
+                        icon={item.icon}
+                        size={item.size}
+                        label={item.label}
+                        value={item.value}
+                      />
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </SectionContainer>
