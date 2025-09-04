@@ -6,6 +6,7 @@ import {
   Menu,
   X,
   CircleAlert,
+  Download
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { InfoBadge } from "./components/custom/Info-badge";
@@ -26,6 +27,7 @@ import { SectionContainer } from "./components/custom/section-container";
 import { SectionHeader } from "./components/custom/section-header";
 import { IntroCard } from "./components/custom/intro-card";
 import { PersonalInfoCard } from "./components/custom/personal-info-card";
+import { ToolTip } from "./components/custom/tooltip";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -299,6 +301,12 @@ const Portfolio = () => {
                     );
                   })}
                 </ul>
+
+                <button className="relative group inline-flex items-center gap-2 border-2 border-gray-800 px-6 py-2 rounded-lg hover:text-white hover:bg-gray-800 hover:-translate-y-1 duration-300 transition-all">
+                  <Download />
+                  <span className="font-semibold">Download My Resume</span>
+                  <ToolTip title="Download My Resume" />
+                </button>
               </div>
             </div>
           </SectionContainer>
