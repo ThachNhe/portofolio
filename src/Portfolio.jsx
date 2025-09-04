@@ -2,11 +2,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ChartColumnDecreasing, CodeXml, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { InfoBadge } from "./components/ui/Info-badge";
-import { ProfileActionButton } from "./components/ui/profile-action-button";
-import { SkillBadge } from "./components/ui/skill-badge";
-import { SocialMedia } from "./components/ui/social-media";
-import TypeWriter from "./components/ui/typewriter";
+import { InfoBadge } from "./components/custom/Info-badge";
+import { ProfileActionButton } from "./components/custom/profile-action-button";
+import { SkillBadge } from "./components/custom/skill-badge";
+import { SocialMedia } from "./components/custom/social-media";
+import TypeWriter from "./components/custom/typewriter";
 import {
   infoBadges,
   navItems,
@@ -16,10 +16,10 @@ import {
   introCards,
   personalInfos
 } from "./utils/constants";
-import { SectionContainer } from "./components/ui/section-container";
-import { SectionHeader } from "./components/ui/section-header";
-import { IntroCard } from "./components/ui/intro-card";
-import { PersonalInfoCard } from "./components/ui/personal-info-card";
+import { SectionContainer } from "./components/custom/section-container";
+import { SectionHeader } from "./components/custom/section-header";
+import { IntroCard } from "./components/custom/intro-card";
+import { PersonalInfoCard } from "./components/custom/personal-info-card";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
