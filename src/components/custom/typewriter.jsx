@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const TypeWriter = ({
+export const TypeWriter = ({
   words = ["React Developer"],
   typeSpeed = 150,
   deleteSpeed = 75,
@@ -46,4 +46,3 @@ const TypeWriter = ({
   );
 };
 
-export default TypeWriter;
