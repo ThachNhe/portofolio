@@ -4,6 +4,7 @@ export const DesktopNavigation = ({activeSection, scrollToSection}) => {
   return (
     <nav className="hidden md:inline-flex space-x-8">
       {navItems.map((item) => {
+        const { ico: Icon } = item;
         return (
           <button
             key={item.id}
@@ -20,7 +21,7 @@ export const DesktopNavigation = ({activeSection, scrollToSection}) => {
                      : ""
                }`}
             >
-              {item.ico} <span>{item.label}</span>
+              <Icon size={18} /> <span>{item.label}</span>
             </div>
           </button>
         );

@@ -32,7 +32,7 @@ export const MobileNavItems = ({
         }}
       >
         <div className="flex items-center gap-2  font-semibold">
-          {Icon}
+          <Icon size={18} />
           {label}
         </div>
         <ChevronRight size={18} />
