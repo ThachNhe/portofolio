@@ -1,25 +1,25 @@
 import "aos/dist/aos.css";
+import { ChartColumnDecreasing } from "lucide-react";
 import {
-   ChartColumnDecreasing
-} from "lucide-react";
-import {
-   infoBadges,
-   ProfileActionButtons,
-   skillBadges,
-   socialMedials
+  infoBadges,
+  ProfileActionButtons,
+  skillBadges,
+  socialMedials,
 } from "../../utils/constants";
-import { InfoBadge } from "../custom/info-badge";
-import { ProfileActionButton } from "../custom/profile-action-button";
-import { SectionContainer } from "../custom/section-container";
-import { SkillBadge } from "../custom/skill-badge";
-import { SocialMedia } from "../custom/social-media";
-import TypeWriter from "../custom/typewriter";
+import {
+  InfoBadge,
+  ProfileActionButton,
+  SectionContainer,
+  SkillBadge,
+  TypeWriter,
+  SocialMedia,
+} from "../custom";
 
 export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-white shadow-lg overflow-hidden"
+      className="min-h-screen bg-white shadow-lg overflow-hidden pt-20"
     >
       <SectionContainer>
         <div className="flex flex-col lg:flex-row items-center gap-10 justify-center min-h-[calc(100vh-5rem)] py-12">
