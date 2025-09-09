@@ -4,8 +4,10 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { Header } from "./components/layouts";
 import { Home } from "./components/sections/home";
 import { navItems } from "./utils/constants";
+import { SectionLoader } from "./components/custom";
 
 const About = lazy(() => import("./components/sections/about"));
+const Project = lazy(() => import("./components/sections/project"));
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -54,8 +56,11 @@ const Portfolio = () => {
         {/* Home Section */}
         <Home />
         {/* About Section */}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<SectionLoader />}>
           <About />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Project />
         </Suspense>
       </main>
     </div>

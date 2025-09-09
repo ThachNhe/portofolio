@@ -19,7 +19,18 @@ import {
   FileJson,
   FolderKanban,
   GraduationCap,
-  Mail
+  Mail,
+  CircleDollarSign,
+  Contact,
+  BotMessageSquare,
+  CardSim,
+  CloudSunRain,
+  Link2,
+  Landmark,
+  CodeXml,
+  Settings,
+  BatteryFull,
+  Grid3x3
 } from "lucide-react";
 
 
@@ -125,3 +136,154 @@ export const personalInfos = [
   {icon: BookOpenCheck , size: 20, label: "GPA", value: "3.63/4" },
   {icon: GraduationCap , size: 20, label: "Education", value: "University of Engineering and Technology" },
 ]
+
+export const projectData = {
+  "projects": [
+    {
+      "id": 1,
+      "title": "Money Tracker",
+      "category": "fullstack",
+      "year": "2025",
+      "status": "Completed",
+      "icon": CircleDollarSign,
+      "features": [
+        "Supabase Auth + Database",
+        "CRUD transaksi harian",
+        "Statistik pengeluaran",
+        "Dark mode UI"
+      ],
+      "techStack": [
+        "React",
+        "Supabase",
+        "Tailwind"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 2,
+      "title": "Personal Portfolio",
+      "category": "frontend",
+      "year": "2025",
+      "status": "Completed",
+      "icon": Contact,
+      "features": [
+        "Tailwind CSS",
+        "Dark/light mode",
+        "Animated tabs",
+        "Project & skill showcase"
+      ],
+      "techStack": [
+        "React",
+        "Tailwind"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 3,
+      "title": "AI Chatbot JSON",
+      "category": "fullstack",
+      "year": "2025",
+      "status": "Completed",
+      "icon": BotMessageSquare,
+      "features": [
+        "React + Express backend",
+        "Input belajar dari user",
+        "Simpan ke JSON",
+        "Logic respons otomatis"
+      ],
+      "techStack": [
+        "React",
+        "Express",
+        "Node.js"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 4,
+      "title": "RESTful API Service",
+      "category": "backend",
+      "year": "2024",
+      "status": "Completed",
+      "icon": CardSim,
+      "features": [
+        "Express.js + MongoDB",
+        "JWT Auth",
+        "CRUD user & posts",
+        "Swagger API docs"
+      ],
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 5,
+      "title": "Weather App",
+      "category": "frontend",
+      "year": "2024",
+      "status": "Completed",
+      "icon": CloudSunRain,
+      "features": [
+        "Fetch API OpenWeather",
+        "Search by city",
+        "Responsive UI",
+        "Dark mode"
+      ],
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 6,
+      "title": "Link Collector",
+      "category": "fullstack",
+      "year": "2025",
+      "status": "In Progress",
+      "icon": Link2,
+      "features": [
+        "User auth (Supabase)",
+        "Simpan link pribadi",
+        "Search + filter",
+        "Responsive design"
+      ],
+      "techStack": [
+        "React",
+        "Supabase"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    }
+  ],
+  "filterCategories": [
+    {
+      "id": "all",
+      "label": "All Projects",
+      "icon": Grid3x3
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "icon": CodeXml
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "icon": Settings
+    },
+    {
+      "id": "fullstack",
+      "label": "Fullstack",
+      "icon": BatteryFull
+    }
+  ]
+}
