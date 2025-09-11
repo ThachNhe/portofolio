@@ -4,7 +4,7 @@ export const SectionCard = ({activeFilter, handleFilterChange, filterCategories,
   return (
     <>
       <div className="flex items-center justify-center gap-4 flex-wrap mb-8">
-        {filterCategories.map((item, index) => {
+        {filterCategories?.map((item, index) => {
           return (
             <CategoryFilterItem
               categoryData={item}
@@ -16,7 +16,7 @@ export const SectionCard = ({activeFilter, handleFilterChange, filterCategories,
         })}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredProjects.map((project) => {
+        {filteredProjects?.map((project) => {
           return <ProjectCard key={project.id} project={project} />;
         })}
       </div>

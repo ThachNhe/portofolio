@@ -8,6 +8,7 @@ import { SectionLoader } from "./components/custom";
 
 const About = lazy(() => import("./components/sections/about"));
 const Project = lazy(() => import("./components/sections/project"));
+const Experience = lazy(() => import("./components/sections/experience"));
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -62,8 +63,12 @@ const Portfolio = () => {
         <Suspense fallback={<SectionLoader />}>
           <Project />
         </Suspense>
-      </main>
-    </div>
+
+          <Suspense fallback={<SectionLoader />}>
+            <Experience />
+          </Suspense>
+        </main>
+      </div>
   );
 };
 

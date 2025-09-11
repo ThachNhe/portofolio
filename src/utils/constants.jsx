@@ -287,3 +287,94 @@ export const projectData = {
     }
   ]
 }
+
+export const experienceData = {
+  "projects": [
+    {
+      "id": 1,
+      "title": "Frontend Developer Intern",
+      "category": "work",
+      "year": "2024",
+      "status": "Completed",
+      "icon": BriefcaseBusiness,
+      "features": [
+        "Developed responsive web pages using React and Tailwind CSS.",
+        "Collaborated with designers to implement UI/UX improvements.",
+        "Optimized website performance, reducing load times by 20%."
+      ],
+      "techStack": [
+        "React",
+        "Tailwind CSS",
+        "Git"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 2,
+      "title": "Open Source Contributor",
+      "category": "personal",
+      "year": "2023",
+      "status": "Ongoing",
+      "icon": FileJson,
+      "features": [
+        "Contributed to various open-source projects on Git   Hub.",
+        "Fixed bugs and implemented new features in JavaScript libraries.",
+        "Engaged with the community to review code and provide feedback."
+      ],
+      "techStack": [
+        "JavaScript",
+        "Git",
+        "GitHub"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    },
+    {
+      "id": 3,
+      "title": "University Project - E-commerce Website",
+      "category": "academic",
+      "year": "2022",
+      "status": "Completed",
+      "icon": GraduationCap,
+      "features": [
+        "Led a team of 4 to develop a full-stack e-commerce website.",
+        "Implemented user authentication, product listings, and shopping cart functionality.",
+        "Deployed the application using Heroku and managed the database with MongoDB."
+      ],
+      "techStack": [
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+      "demoUrl": "#",
+      "codeUrl": "#"
+    }
+  ],
+  "filterCategories": [
+    {
+      "id": "all",
+      "label": "All Experiences",
+      "icon": Grid3x3
+    },
+    {
+      "id": "work",
+      "label": "Work",
+      "icon": BriefcaseBusiness
+    },
+    {
+      "id": "personal",
+      "label": "Personal",
+      "icon": FileJson
+    },
+    {
+      "id": "academic",
+      "label": "Academic",
+      "icon": GraduationCap
+    }
+  ] 
+}
+
+const skillData = [
+  
+]
